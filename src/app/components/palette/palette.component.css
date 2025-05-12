@@ -1,0 +1,146 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0px;
+}
+
+.palette__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100dvh;
+  gap: 5rem;
+  background-size: cover;
+  background: linear-gradient(rgba(0, 0, 0, 0.705), rgba(0, 0, 0, 0.8)), url('/images/bg_color.jpg');
+}
+
+.palette {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5rem;
+}
+
+.color-box {
+  width: 300px;
+  height: 300px;
+  margin: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: flex-end;
+  border-radius: 10px;
+  justify-content: center;
+  color: white;
+  font-weight: 400;
+  font-size: 24px;
+  transition: all 300ms ease-in-out;
+}
+
+
+.palette__button {
+  margin-top: 20px;
+  padding: 20px 30px;
+  background: linear-gradient(90deg,rgba(255, 0, 0, 1) 0%, rgba(128, 0, 8, 1) 50%, rgba(43, 2, 2, 1) 100%);;
+  color: white;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  transition: all 300ms ease-in-out;
+  animation: pulse 2s infinite;
+}
+
+.palette__button:hover {
+  background: white;
+  color: rgba(128, 0, 8, 1);
+}
+
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.1);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+.notification {
+  margin-top: 10px;
+  color: white;
+  font-weight: bold;
+  padding: 10px 30px;
+  background-color: green;
+  transition: all 300ms ease;
+}
+
+footer {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  bottom: 0;
+  width: 100%;
+  color: #fafafa;
+  padding: 10px;
+  font-weight: 300;
+  text-align: center;
+  font-size: 1rem;
+}
+
+
+@media (max-width: 1440px) {
+  .palette__container {
+    gap: 1rem;
+  }
+
+  .color-box {
+    width: 240px;
+    height: 240px;
+  }
+
+  .palette {
+    margin: 1rem;
+  }
+}
+
+@media (max-width: 1250px) {
+  .color-box {
+    width: 115px;
+    height: 115px;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 770px) {
+  .palette {
+    flex-direction: column;
+  }
+
+  .color-box {
+    width: 350px;
+    height: 50px;
+  }
+
+  .palette__button {
+    padding: 10px 30px;
+  }
+
+  footer {
+    font-size: 0.6rem;
+  }
+
+  .notification {
+    font-size: 12px;
+    font-weight: 400;
+  }
+}

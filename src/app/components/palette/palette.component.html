@@ -1,0 +1,21 @@
+<div class="palette__container">
+    <div class="palette">
+        <div
+            *ngFor="let color of colors"
+            class="color-box"
+            [style.background]="color"
+            (click)="copyColor(color)"
+        >
+            <span class="palette__color">{{ color }}</span>
+        </div>
+    </div>
+
+    <button class="palette__button" (click)="generatePalette()">Generar Paleta</button>
+
+    <div class="notification" *ngIf="notification">{{ notification }}</div>
+
+    <footer>
+        <p>Realizado por Mariano Suárez | &copy; Todos los derechos reservados 2025</p>
+    </footer>    
+</div>
+
